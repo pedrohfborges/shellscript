@@ -7,7 +7,7 @@ PGUSER="userdobanco"
 PGDATABASE="nomedobanco"
 
 
-read -p "Digite o número dos pedidos a serem gerados: " oocode
+read -p "Digite o número dos pedidos a serem gerados: " variavelentrada
 
 nomearquivoxml=P8001$(date +%d%m%Y%H%M)
 
@@ -59,7 +59,7 @@ INNER JOIN (
         op.??? IN (1, 2, 3, 4, 10, 14, 18)
     GROUP BY op.???
 ) s1 ON oo.id = s1.???
-WHERE cc.campo2 in ($oocode)
+WHERE cc.campo2 in ($variavelentrada)
     AND oo.??? = '79638307-2d03-4780-8159-971b6a4c22a8'
     AND oo.??? IN (3, 5)
     AND (oo.campo9 + oo.???) != 0
@@ -114,7 +114,7 @@ INNER JOIN (
         op.??? IN (1, 2, 3, 4, 10, 14, 18)
     GROUP BY op.???
 ) s1 ON oo.id = s1.???
-WHERE cc.campo2 in ($oocode)
+WHERE cc.campo2 in ($variavelentrada)
     AND oo.??? = '79638307-2d03-4780-8159-971b6a4c22a8'
     AND oo.??? IN (3, 5)
     AND (oo.campo9 + oo.???) != 0
