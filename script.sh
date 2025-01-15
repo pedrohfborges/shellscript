@@ -18,7 +18,7 @@ echo '<?xml version="1.0" standalone="yes"?>' > $OUTPUT_XML
 echo '<NewDataSet>' >> $OUTPUT_XML
 
 
-# Connect to the PostgreSQL database and export data to CSV
+# Conectar no banco de dados e realizar uma query jogando pro CSV
 PGPASSWORD="$PGPASSWORD" psql -h "$PGHOST" -U "$PGUSER" -d "$PGDATABASE" -c "\COPY ( 
 SELECT
     cc.campo1, 
@@ -128,7 +128,7 @@ ORDER BY
 
 
 
-# Process each line of the CSV file
+# Criação do Loop de leitura da planilha para preencher o arquivo xml (cada variavel mencionada aqui será direcionada no XML mais pra frente
 tail -n +1 saida.csv | while IFS=',' read -r variavel1 variavel2 variavel3 variavel4 variavel5 variavel6 variavel7 variavel8 variavel9 variavel10 variavel11 variavel12 variavel13 variavel14 variavel15; do
 
 set +e
@@ -153,7 +153,7 @@ dataanopedido=$(echo $mespagamento | cut -d "_" -f1)
 
 
 
-    # Create a new PedidoCarga block for each row
+    # As variaveis estão repetidas porem cada variavel declarada na linha 132 seria um campo aqui
     cat <<EOF >> $OUTPUT_XML&
     <PedidoCarga>
         <SIGLA>BHZ</SIGLA>
