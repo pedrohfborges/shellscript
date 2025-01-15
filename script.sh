@@ -133,10 +133,10 @@ tail -n +1 saida.csv | while IFS=',' read -r variavel1 variavel2 variavel3 varia
 
 set +e
 
-dia=$(echo "$variavel4" | cut -d ' ' -f1 | cut -d '-' -f3) ##calculo para realizar o numero da semana
+dia=$(echo "$variavel4" | cut -d ' ' -f1 | cut -d '-' -f3) ##tratar a data vinda do banco pra mostrar apenas o dia
 
 
-##eliminar a limitação do bash 08 e 09
+##eliminar a limitação do bash 08 e 09 (não pode ser feito cancelos com numemeros 08 e 09 pelo bash
 if [ "$dia" -eq 08 ]; then
     dia=8
 elif [ "$dia" -eq 09 ]; then
