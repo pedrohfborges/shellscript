@@ -34,14 +34,14 @@ SELECT
     CASE
         WHEN oo.campo7 IS NULL THEN 'Sem data'
         ELSE TO_CHAR(oo.campo7, 'YYYY_MM')
-    END AS MesCriacaoPedido,
-    s1.campo8 AS TotalPedido,
-    SUM(osi.totalquantity * osi.unitaryvalue) AS algumacoisa,
-    SUM(osi.rechargediscountvalue) AS algumacoisa,
-    oo.campo9 AS TaxaAdministrativa,
-    SUM(osi.sucessfeevalue) AS TaxaSucesso,
-    oo.reusefee AS taxaaproveitamento,
-    (oo.campo9 + oo.reusefee) AS notafiscal
+    END AS ???,
+    s1.??? AS ???,
+    SUM(osi.??? * osi.???) AS ???,
+    SUM(osi.???) AS ???,
+    oo.campo9 AS ???,
+    SUM(osi.???) AS ???,
+    oo.reusefee AS ???,
+    (oo.campo9 + oo.???) AS ???
 FROM
     tabela oo
 INNER JOIN tabela 2 os ON ??? = ???
@@ -89,14 +89,14 @@ SELECT
     CASE
         WHEN oo.campo7 IS NULL THEN 'Sem data'
         ELSE TO_CHAR(oo.campo7, 'YYYY_MM')
-    END AS MesCriacaoPedido,
-    s1.campo8 AS TotalPedido,
-    SUM(osi.totalquantity * osi.unitaryvalue) AS algumacoisa,
-    SUM(osi.rechargediscountvalue) AS algumacoisa,
-    oo.campo9 AS TaxaAdministrativa,
-    SUM(osi.sucessfeevalue) AS TaxaSucesso,
-    oo.reusefee AS taxaaproveitamento,
-    (oo.campo9 + oo.reusefee) AS notafiscal
+    END AS ???,
+    s1.??? AS ???,
+    SUM(osi.??? * osi.???) AS ???,
+    SUM(osi.???) AS ???,
+    oo.campo9 AS ???,
+    SUM(osi.???) AS ???,
+    oo.??? AS ???,
+    (oo.??? + oo.???) AS ???
 FROM
     tabela oo
 INNER JOIN tabela 2 os ON ??? = ???
