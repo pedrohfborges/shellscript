@@ -7,7 +7,7 @@ PGUSER="userdobanco"
 PGDATABASE="nomedobanco"
 
 
-read -p "Digite o número dos pedidos a serem gerados: " variavelentrada
+read -p "Digite o número dos pedidos a serem gerados: " variavelentrada #a partir dessa entrada será utilizado o valor na query
 
 nomearquivoxml=P8001$(date +%d%m%Y%H%M)
 
